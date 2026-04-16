@@ -8,9 +8,9 @@ components/attack/cmd.py
 components/attack/cookie_flags.py
 components/attack/csrf.py
 components/attack/headers.py
-components/attack/idor.py
 components/attack/sqli.py
 components/attack/xss.py
+components/attack/xss_utils.py
 components/main/__init__.py
 components/main/console.py
 components/main/gui.py
