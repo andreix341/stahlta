@@ -9,7 +9,9 @@ The scanner performs both **static and dynamic analysis**, sending crafted paylo
 - Built with a **modular architecture**, making it easy to extend or integrate with other tools  
 - Tests for both **traditional** and **modern** attack vectors
 - Asynchronous HTTP fetching and processing  
-- Single-command CLI invocation  
+- Single-command CLI invocation
+---
+<img width="733" height="442" alt="image" src="https://github.com/user-attachments/assets/1debafed-6d70-4cb3-b6c6-1d6279a95c0f" />
 
 ## Prerequisites
 
