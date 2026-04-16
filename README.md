@@ -22,7 +22,7 @@ The scanner performs both **static and dynamic analysis**, sending crafted paylo
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/stahlta.git
+git clone https://github.com/andreix341/stahlta.git
 cd stahlta
 ```
 
