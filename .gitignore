@@ -1,2 +1,7 @@
 .venv/
 reports/*
+/components/attack/__pycache__
+/components/main/__pycache__
+/components/main/__pycache__
+/components/main/__pycache__
+/components/parsers/__pycache__

@@ -69,9 +69,7 @@ def validate_output_path(output_path: str, default_name: str = 'stahlta_report_'
         folder = output_path or '.'
         final_path = os.path.join(folder, default_name)
 
-    if not os.path.isdir(folder):
-        return None
-
+    os.makedirs(folder, exist_ok=True)
     return final_path
 
 def report_vulnerability(severity: str, category: str, description: str, details: dict):

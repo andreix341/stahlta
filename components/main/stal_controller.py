@@ -135,7 +135,7 @@ class Stahlta:
                 
             
     
-    async def attack(self):
+    async def attack(self, stop_event: asyncio.Event = None):
         registry = BaseAttack.load_attacks()
         
         names = [n.lower() for n in self._attack_list]
@@ -155,7 +155,9 @@ class Stahlta:
             instances = [cls(crawler, self.crawler_config, self._wordlist_path) for cls in attack_classes]
 
             for attack_obj in instances:
-                
+                if stop_event and stop_event.is_set():
+                    break
+                    
                 log_attack(f"Running attack: {attack_obj.name.upper()} \n")
                 status_update_attack(attack_obj.name.upper())
                 
@@ -163,6 +165,10 @@ class Stahlta:
                 try:
                     await task
                     print()
+                    
+                except asyncio.CancelledError:
+                    log_info(f"Attack {attack_obj.name} cancelled.")
+                    raise
                     
                 except Exception as e:
                     log_error(f"Error running attack {attack_obj.name}: {e}")

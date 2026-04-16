@@ -1,4 +1,8 @@
 
+import warnings
+from bs4 import XMLParsedAsHTMLWarning
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+
 import bs4 as BeautifulSoup
 import re
 from urllib.parse import urlparse, urlunparse, urljoin
